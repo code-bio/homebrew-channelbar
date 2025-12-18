@@ -21,20 +21,8 @@ brew install code-bio/memobar/memobar
 ## Usage
 
 ```bash
-# Set a message in the default channel
-memobar set "Your message"
-
-# Set a message in a specific channel
-memobar set --channel work "Meeting at 3pm"
-
-# Get the current message
-memobar get
-
-# List all messages
-memobar list
-
-# Show all available commands
-memobar --help
+# Show installed version
+memobar version
 ```
 
 ## Requirements
@@ -64,4 +52,4 @@ memoBar displays customizable messages in your macOS menu bar. Use the CLI to pr
 
 ## License
 
-MIT
+Copyright 2025 Christian Franzl, code.bio GmbH
