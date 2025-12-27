@@ -1,7 +1,7 @@
 class Memobar < Formula
   desc "CLI tool for memoBar"
   homepage "https://memobar.app"
-  # Use a dummy URL - we extract manually to preserve signatures
+  # Real URL - post_install re-downloads to preserve code signature
   url "https://github.com/code-bio/homebrew-memobar/releases/download/v0.3.3/memobar-cli-0.3.3.tar.gz"
   sha256 "a3b76cb58253462223a0445a36b5da8150e157db2be08e4c0a2a03f6a8b0b74a"
   license "Copyright 2025 Christian Franzl, code.bio GmbH"
@@ -35,7 +35,7 @@ class Memobar < Formula
 
       Usage:
         memobar version                  # Show current version
-        memobar --help                   # Show all commands
+        memobar                          # Show all commands
 
       macOS Tahoe (26+):
         If you see a dialog about accessing data from other apps,
