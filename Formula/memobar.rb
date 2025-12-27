@@ -15,7 +15,7 @@ class Memobar < Formula
 
   def post_install
     # Download and extract AFTER Homebrew's post-processing
-    tarball_url = "https://github.com/code-bio/homebrew-memobar/releases/download/v0.3.5#{version}/memobar-cli-#{version}.tar.gz"
+    tarball_url = "https://github.com/code-bio/homebrew-memobar/releases/download/v#{version}/memobar-cli-#{version}.tar.gz"
 
     # Clear and re-extract to preserve signatures
     system "rm", "-rf", libexec/"memobar", libexec/"Frameworks"
