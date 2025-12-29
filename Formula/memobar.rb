@@ -2,8 +2,8 @@ class Memobar < Formula
   desc "CLI tool for memoBar"
   homepage "https://memobar.app"
   # Real URL - post_install re-downloads to preserve code signature
-  url "https://github.com/code-bio/homebrew-memobar/releases/download/v0.5.3/memobar-cli-0.5.3.tar.gz"
-  sha256 "92e5c3d6f68a59075c7a6b6b06e6b98946ea9443ed4c50ef2572c00a571f837a"
+  url "https://github.com/code-bio/homebrew-memobar/releases/download/v0.9.1/memobar-cli-0.9.1.tar.gz"
+  sha256 "d0425d6fe46597dfb550882f1022dc77d3c8c6702bc37b017a68a037eddc0092"
   license "Copyright 2025 Christian Franzl, code.bio GmbH"
 
   depends_on :macos
