@@ -17,15 +17,28 @@ class Channelbar < Formula
     # Download and extract AFTER Homebrew's post-processing
     tarball_url = "https://github.com/code-bio/homebrew-channelbar/releases/download/v#{version}/channelbar-cli-#{version}.tar.gz"
 
+    # Use unique temp file to avoid conflicts with parallel installs
+    require "tempfile"
+    tmpfile = Tempfile.new(["channelbar-cli", ".tar.gz"])
+    tmppath = tmpfile.path
+    tmpfile.close
+
     # Clear and re-extract to preserve signatures
-    system "rm", "-rf", libexec/"channelbar", libexec/"Frameworks"
-    system "curl", "-L", tarball_url, "-o", "/tmp/channelbar-cli.tar.gz"
-    system "tar", "-xzf", "/tmp/channelbar-cli.tar.gz", "-C", libexec
-    system "rm", "/tmp/channelbar-cli.tar.gz"
+    system "rm", "-rf", libexec/"channelbar", libexec/"Frameworks", libexec/"THIRD-PARTY-LICENSES.txt"
+    system "curl", "-L", tarball_url, "-o", tmppath
+    system "tar", "-xzf", tmppath, "-C", libexec
+    system "rm", "-f", tmppath
     system "chmod", "755", libexec/"channelbar"
 
     # Create symlink manually after binary exists
     system "ln", "-sf", libexec/"channelbar", HOMEBREW_PREFIX/"bin/channelbar"
+
+    # Install license file to doc directory (if present in tarball)
+    license_src = libexec/"THIRD-PARTY-LICENSES.txt"
+    if File.exist?(license_src)
+      doc.mkpath
+      system "cp", "-p", license_src, doc/"THIRD-PARTY-LICENSES.txt"
+    end
   end
 
   def caveats
@@ -36,6 +49,10 @@ class Channelbar < Formula
       Usage:
         channelbar version               # Show current version
         channelbar                       # Show all commands
+        channelbar --licenses            # Show third-party licenses
+
+      Third-party license information:
+        #{HOMEBREW_PREFIX}/share/doc/channelbar/THIRD-PARTY-LICENSES.txt
     EOS
   end
 
