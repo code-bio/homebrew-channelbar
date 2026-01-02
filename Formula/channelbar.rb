@@ -43,6 +43,7 @@ class Channelbar < Formula
 
   def caveats
     <<~EOS
+
       The channelbar CLI requires the channelBar app to be running.
       Get the app from: https://channelbar.app
 
@@ -51,8 +52,6 @@ class Channelbar < Formula
         channelbar                       # Show all commands
         channelbar --licenses            # Show third-party licenses
 
-      Third-party license information:
-        #{HOMEBREW_PREFIX}/share/doc/channelbar/THIRD-PARTY-LICENSES.txt
     EOS
   end
 
