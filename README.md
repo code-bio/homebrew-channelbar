@@ -52,4 +52,5 @@ channelBar displays customizable messages in your macOS menu bar. Use the CLI to
 
 ## License
 
-Copyright 2025 Christian Franzl, code.bio GmbH
+Copyright © 2026 code.bio GmbH
+All rights reserved.
