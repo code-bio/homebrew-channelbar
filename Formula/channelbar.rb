@@ -4,8 +4,8 @@ class Channelbar < Formula
   license "Copyright © 2026 code.bio GmbH"
 
   on_macos do
-    url "https://github.com/code-bio/homebrew-channelbar/releases/download/v1.1.0/channelbar-cli-1.1.0.tar.gz"
-    sha256 "612fb452fefc013799036b411fbdc9422848c107f7c682cb2556f061b00ee05e"
+    url "https://github.com/code-bio/homebrew-channelbar/releases/download/v1.1.1/channelbar-cli-1.1.1.tar.gz"
+    sha256 "fb7bc04b3cca7500af0b8564436ef1f9f2de0935cab73fefdfc91995c019c600"
 
     def install
       libexec.mkpath
@@ -37,13 +37,13 @@ class Channelbar < Formula
 
   on_linux do
     on_intel do
-      url "https://github.com/code-bio/homebrew-channelbar/releases/download/v1.1.0/channelbar-cli-1.1.0-linux-x86_64.tar.gz"
-      sha256 "LINUX_X86_64_SHA256_PLACEHOLDER"
+      url "https://github.com/code-bio/homebrew-channelbar/releases/download/v1.1.1/channelbar-cli-1.1.1-linux-x86_64.tar.gz"
+      sha256 "aafab595b46e212daff03829b8e77f817d804b3d9a4333b87c4745839eae6c5e"
     end
 
     on_arm do
-      url "https://github.com/code-bio/homebrew-channelbar/releases/download/v1.1.0/channelbar-cli-1.1.0-linux-arm64.tar.gz"
-      sha256 "LINUX_ARM64_SHA256_PLACEHOLDER"
+      url "https://github.com/code-bio/homebrew-channelbar/releases/download/v1.1.1/channelbar-cli-1.1.1-linux-arm64.tar.gz"
+      sha256 "579f38914b24b7e17cbb93c9aead763ebc3a9fef8518305f40f47399d20ad85f"
     end
 
     def install
