@@ -3,8 +3,8 @@ class Channelbar < Formula
   homepage "https://channelbar.app"
   license "Copyright © 2026 code.bio GmbH"
 
-  url "https://github.com/code-bio/homebrew-channelbar/releases/download/v1.1.2/channelbar-cli-1.1.2.tar.gz"
-  sha256 "701e0a9f750e4d41931e9ce5014e2ecb2d2dbfb3b4260e1a59d0f458efd680b7"
+  url "https://github.com/code-bio/homebrew-channelbar/releases/download/v1.2.0/channelbar-cli-1.2.0.tar.gz"
+  sha256 "25dc6305822cccb82293e257eaad47163512d47b4fa3d576b6959b0ddbb82fb6"
 
   depends_on :macos
 
